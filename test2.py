@@ -12,6 +12,7 @@ from collections import deque, namedtuple
 env = gym.envs.make("SeaquestDeterministic-v4")
 
 num_actions = env.action_space.n
+gamma = 0.99
 
 
 class StateProcessor():
@@ -32,9 +33,13 @@ class Estimator():
     def __init__(self, scope="estimator", summaries_dir=None, num_atoms=51):
         self.scope = scope
         self.summary_writer = None
-        self.num_atoms = num_atoms
 
-        self.z = np.linspace(self.Vmin, self.Vmax, self.N) #, dtype=np.int32)
+        self.gamma = gamma
+        self.N = num_atoms
+        self.Vmax = 10
+        self.Vmin = -self.Vmax
+        self.dz = (self.Vmax - self.Vmin) / (self.N - 1)
+        self.z = np.linspace(self.Vmin, self.Vmax, self.N)
 
         with tf.variable_scope(scope):
             # Build the graph
@@ -50,7 +55,7 @@ class Estimator():
         # Our input are 4 RGB frames of shape 160, 160 each
         self.X_pl = tf.placeholder(shape=[None, 84, 84, 4], dtype=tf.uint8, name="X")
         # The TD target value
-        self.y_pl = tf.placeholder(shape=[None], dtype=tf.float32, name="y")
+        self.target_prob = tf.placeholder(shape=[None, self.N], dtype=tf.float32, name="y")
         # Integer id of which action was selected
         self.actions_pl = tf.placeholder(shape=[None], dtype=tf.int32, name="actions")
 
@@ -68,15 +73,19 @@ class Estimator():
         # Fully connected layers
         flattened = tf.contrib.layers.flatten(conv3)
         fc1 = tf.contrib.layers.fully_connected(flattened, 512)
-        self.predictions = tf.contrib.layers.fully_connected(fc1, num_actions * self.num_atoms, activation_fn=None)
+
+        self.logits = tf.contrib.layers.fully_connected(fc1, num_actions * self.N, activation_fn=None)
+        self.logits = tf.reshape(self.logits, (-1, num_actions, self.N))
+        
+        self.probs = tf.nn.softmax(self.logits)
+        self.q_values = tf.reduce_sum(self.probs * self.z, axis=2)
 
         # Get the predictions for the chosen actions only
-        gather_indices = tf.range(batch_size) * tf.shape(self.predictions)[1] + self.actions_pl
-        self.action_predictions = tf.gather(tf.reshape(self.predictions, [-1]), gather_indices)
+        gather_indices = tf.range(batch_size) * num_actions + self.actions_pl
+        self.actions_probs = tf.gather(tf.reshape(self.probs, [-1, self.N]), gather_indices)
 
         # Calcualte the loss
-        self.losses = tf.squared_difference(self.y_pl, self.action_predictions)
-        self.loss = tf.reduce_mean(self.losses)
+        self.loss = - tf.reduce_sum(self.target_prob * tf.log(self.actions_probs))
 
         # Optimizer Parameters from original paper
         self.optimizer = tf.train.RMSPropOptimizer(0.00025, 0.99, 0.0, 1e-6)
@@ -85,16 +94,44 @@ class Estimator():
         # Summaries for Tensorboard
         self.summaries = tf.summary.merge([
             tf.summary.scalar("loss", self.loss),
-            tf.summary.histogram("loss_hist", self.losses),
-            tf.summary.histogram("q_values_hist", self.predictions),
-            tf.summary.scalar("max_q_value", tf.reduce_max(self.predictions))
+            tf.summary.histogram("q_values_hist", self.q_values),
+            tf.summary.scalar("max_q_value", tf.reduce_max(self.q_values))
         ])
 
     def predict(self, sess, s):
-        return sess.run(self.predictions, { self.X_pl: s })
+        return sess.run(self.q_values, { self.X_pl: s })
 
-    def update(self, sess, s, a, y):
-        feed_dict = { self.X_pl: s, self.y_pl: y, self.actions_pl: a }
+    def get_target_distr(self, sess, x2, rewards):
+        # rewards           | (bsize)
+        # x1 - cur_state    | (bsize x 84 x 84 x 4)
+        # x2 - next_state   | (bsize x 84 x 84 x 4)
+        # return            | (bsize x N)
+        q_values, probs = sess.run([self.q_values, self.probs], { self.X_pl: x2 }) # (bsize, num_actions), (bsize, num_actions, num_atoms)
+        a_star = np.amax(q_values, axis=1) # (bsize)
+
+        bsize = a_star.shape[0]
+        probs_star = probs[range(bsize), a_star] # (bsize, N)
+
+        r_rep = np.tile(np.expand_dims(rewards, 1), (1, self.N))
+        Tz = np.clip(r_rep + self.gamma * self.z, self.Vmin, self.Vmax)
+        # Tz | bsize x N
+        b = (Tz - self.Vmin) / self.dz # b[batch, i] belongs [0, N-1]
+        l, u = np.floor(b).astype(np.int32), np.ceil(b).astype(np.int32)
+
+        m = np.zeros((bsize, self.N), dtype=np.float32)
+
+        for i in range(self.N):
+            m[range(bsize), l[:, i]] += probs_star[:, i] * (u[:, i] - b[:, i])
+            m[range(bsize), u[:, i]] += probs_star[:, i] * (b[:, i] - l[:, i])
+
+        return m
+
+    def update(self, sess, x1, a, targ_prob):
+        feed_dict = {
+            self.X_pl: x1,
+            self.actions_pl: a,
+            self.target_prob: targ_prob
+        }
         summaries, global_step, _, loss = sess.run(
             [self.summaries, tf.contrib.framework.get_global_step(), self.train_op, self.loss],
             feed_dict)
@@ -205,7 +242,7 @@ def deep_q_learning(sess,
 
     # Record videos
     # Add env Monitor wrapper
-    env = Monitor(env, directory=monitor_path, video_callable=lambda count: count % record_video_every == 0, resume=True)
+    # env = Monitor(env, directory=monitor_path, video_callable=lambda count: count % record_video_every == 0, resume=True)
 
     for i_episode in range(num_episodes):
 
@@ -251,16 +288,10 @@ def deep_q_learning(sess,
             states_batch, action_batch, reward_batch, next_states_batch, done_batch = map(np.array, zip(*samples))
 
             # Calculate q values and targets
-            q_values_next = q_estimator.predict(sess, next_states_batch)
-            best_actions = np.argmax(q_values_next, axis=1)
-            q_values_next_target = target_estimator.predict(sess, next_states_batch)
-
-            targets_batch = reward_batch + np.invert(done_batch).astype(np.float32) * \
-                discount_factor * q_values_next_target[np.arange(batch_size), best_actions]
+            targ_prob = target_estimator.get_target_distr(sess, next_states_batch, reward_batch)
 
             # Perform gradient descent update
-            states_batch = np.array(states_batch)
-            loss = q_estimator.update(sess, states_batch, action_batch, targets_batch)
+            loss = q_estimator.update(sess, states_batch, action_batch, targ_prob)
 
             state = next_state
             total_t += 1
@@ -314,5 +345,5 @@ with tf.Session(config=tf_config) as sess:
                     epsilon_start=1.0,
                     epsilon_end=0.1,
                     epsilon_decay_steps=500000,
-                    discount_factor=0.99,
+                    discount_factor=gamma,
                     batch_size=32)
