@@ -226,11 +226,6 @@ def deep_q_learning(sess,
                 estimator_copy.make(sess)
                 print("\nCopied model parameters to target network.")
 
-            # Print out which step we're on, useful for debugging.
-            print("\rStep {} ({}) @ Episode {}/{}, loss: {}".format(
-                    t, total_t, i_episode + 1, num_episodes, loss), end="")
-            sys.stdout.flush()
-
             # Take a step
             action_probs = policy(sess, state, epsilon)
             action = np.random.choice(np.arange(len(action_probs)), p=action_probs)
@@ -299,6 +294,7 @@ state_processor = StateProcessor()
 
 gpu_options = tf.GPUOptions(per_process_gpu_memory_fraction=0.1)
 tf_config = tf.ConfigProto(gpu_options=gpu_options)
+
 # Run it!
 with tf.Session(config=tf_config) as sess:
     sess.run(tf.global_variables_initializer())
