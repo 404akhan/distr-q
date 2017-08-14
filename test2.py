@@ -107,7 +107,7 @@ class Estimator():
         # x2 - next_state   | (bsize x 84 x 84 x 4)
         # return            | (bsize x N)
         q_values, probs = sess.run([self.q_values, self.probs], { self.X_pl: x2 }) # (bsize, num_actions), (bsize, num_actions, num_atoms)
-        a_star = np.amax(q_values, axis=1) # (bsize)
+        a_star = np.argmax(q_values, axis=1) # (bsize)
 
         bsize = a_star.shape[0]
         probs_star = probs[range(bsize), a_star] # (bsize, N)
@@ -253,7 +253,7 @@ def deep_q_learning(sess,
         state = env.reset()
         state = state_processor.process(sess, state)
         state = np.stack([state] * 4, axis=2)
-        loss = None
+        losses = []
 
         # One step in the environment
         for t in itertools.count():
@@ -292,13 +292,14 @@ def deep_q_learning(sess,
 
             # Perform gradient descent update
             loss = q_estimator.update(sess, states_batch, action_batch, targ_prob)
+            losses.append(loss)
 
             state = next_state
             total_t += 1
 
             if done:
                 print("Step {} ({}) @ Episode {}/{}, loss: {}".format(
-                    t, total_t, i_episode + 1, num_episodes, loss), end=", ")
+                    t, total_t, i_episode + 1, num_episodes, np.mean(losses)), end=", ")
                 print('reward %f, eps %f' % (ep_rewards[i_episode], epsilon))
                 break
 
