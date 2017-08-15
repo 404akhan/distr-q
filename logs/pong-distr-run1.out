@@ -1,0 +1,898 @@
+[2017-08-14 09:41:41,815] Making new env: PongDeterministic-v4
+/usr/local/lib/python3.5/site-packages/tensorflow/python/ops/gradients_impl.py:93: UserWarning: Converting sparse IndexedSlices to a dense Tensor of unknown shape. This may consume a large amount of memory.
+  "Converting sparse IndexedSlices to a dense Tensor of unknown shape. "
+2017-08-14 09:41:48.840901: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-14 09:41:48.840965: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-14 09:41:48.840974: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-14 09:41:48.840980: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-14 09:41:48.840987: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use FMA instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-14 09:41:49.242085: I tensorflow/core/common_runtime/gpu/gpu_device.cc:940] Found device 0 with properties: 
+name: Tesla M40 24GB
+major: 5 minor: 2 memoryClockRate (GHz) 1.114
+pciBusID 0000:8a:00.0
+Total memory: 23.93GiB
+Free memory: 15.48GiB
+2017-08-14 09:41:49.242149: I tensorflow/core/common_runtime/gpu/gpu_device.cc:961] DMA: 0 
+2017-08-14 09:41:49.242159: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   Y 
+2017-08-14 09:41:49.242174: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1030] Creating TensorFlow device (/gpu:0) -> (device: 0, name: Tesla M40 24GB, pci bus id: 0000:8a:00.0)
+Populating replay memory...
+
+Copied model parameters to target network.
+Step 948 (949) @ Episode 1/10000, loss: 122.79998779296875, reward -19.000000, eps 0.998294
+Step 988 (1938) @ Episode 2/10000, loss: 122.55107116699219, reward -20.000000, eps 0.996513
+Step 945 (2884) @ Episode 3/10000, loss: 122.54505920410156, reward -21.000000, eps 0.994811
+Step 883 (3768) @ Episode 4/10000, loss: 122.55060577392578, reward -21.000000, eps 0.993219
+Step 819 (4588) @ Episode 5/10000, loss: 122.54989624023438, reward -21.000000, eps 0.991743
+Step 1005 (5594) @ Episode 6/10000, loss: 122.54291534423828, reward -21.000000, eps 0.989933
+Step 843 (6438) @ Episode 7/10000, loss: 122.52782440185547, reward -20.000000, eps 0.988413
+Step 1023 (7462) @ Episode 8/10000, loss: 122.50732421875, reward -20.000000, eps 0.986570
+Step 892 (8355) @ Episode 9/10000, loss: 122.49565887451172, reward -20.000000, eps 0.984963
+Step 1167 (9523) @ Episode 10/10000, loss: 122.4955062866211, reward -21.000000, eps 0.982860
+
+Copied model parameters to target network.
+Step 869 (10393) @ Episode 11/10000, loss: 123.51984405517578, reward -20.000000, eps 0.981294
+Step 879 (11273) @ Episode 12/10000, loss: 124.76943969726562, reward -21.000000, eps 0.979710
+Step 945 (12219) @ Episode 13/10000, loss: 124.76142883300781, reward -21.000000, eps 0.978008
+Step 883 (13103) @ Episode 14/10000, loss: 124.75684356689453, reward -21.000000, eps 0.976416
+Step 851 (13955) @ Episode 15/10000, loss: 124.73802185058594, reward -21.000000, eps 0.974883
+Step 1007 (14963) @ Episode 16/10000, loss: 124.75956726074219, reward -20.000000, eps 0.973068
+Step 852 (15816) @ Episode 17/10000, loss: 124.7508544921875, reward -21.000000, eps 0.971533
+Step 1081 (16898) @ Episode 18/10000, loss: 124.74977111816406, reward -20.000000, eps 0.969585
+Step 902 (17801) @ Episode 19/10000, loss: 124.74553680419922, reward -21.000000, eps 0.967960
+Step 853 (18655) @ Episode 20/10000, loss: 124.75496673583984, reward -21.000000, eps 0.966423
+Step 1007 (19663) @ Episode 21/10000, loss: 124.75495910644531, reward -20.000000, eps 0.964608
+
+Copied model parameters to target network.
+Step 1101 (20765) @ Episode 22/10000, loss: 124.65644836425781, reward -20.000000, eps 0.962625
+Step 1009 (21775) @ Episode 23/10000, loss: 124.61820983886719, reward -20.000000, eps 0.960807
+Step 955 (22731) @ Episode 24/10000, loss: 124.60028076171875, reward -20.000000, eps 0.959086
+Step 1009 (23741) @ Episode 25/10000, loss: 124.5973892211914, reward -20.000000, eps 0.957268
+Step 823 (24565) @ Episode 26/10000, loss: 124.58940887451172, reward -21.000000, eps 0.955785
+Step 964 (25530) @ Episode 27/10000, loss: 124.58148193359375, reward -21.000000, eps 0.954048
+Step 997 (26528) @ Episode 28/10000, loss: 124.61009216308594, reward -20.000000, eps 0.952251
+Step 1021 (27550) @ Episode 29/10000, loss: 124.58833312988281, reward -20.000000, eps 0.950412
+Step 930 (28481) @ Episode 30/10000, loss: 124.59111022949219, reward -20.000000, eps 0.948736
+Step 981 (29463) @ Episode 31/10000, loss: 124.60931396484375, reward -20.000000, eps 0.946968
+
+Copied model parameters to target network.
+Step 1075 (30539) @ Episode 32/10000, loss: 124.4990234375, reward -20.000000, eps 0.945031
+Step 913 (31453) @ Episode 33/10000, loss: 124.39891815185547, reward -21.000000, eps 0.943386
+Step 1022 (32476) @ Episode 34/10000, loss: 124.38490295410156, reward -20.000000, eps 0.941545
+Step 932 (33409) @ Episode 35/10000, loss: 124.38308715820312, reward -20.000000, eps 0.939865
+Step 918 (34328) @ Episode 36/10000, loss: 124.3748779296875, reward -20.000000, eps 0.938211
+Step 763 (35092) @ Episode 37/10000, loss: 124.37812805175781, reward -21.000000, eps 0.936836
+Step 882 (35975) @ Episode 38/10000, loss: 124.38822174072266, reward -21.000000, eps 0.935247
+Step 823 (36799) @ Episode 39/10000, loss: 124.39290618896484, reward -21.000000, eps 0.933763
+Step 1168 (37968) @ Episode 40/10000, loss: 124.38932800292969, reward -18.000000, eps 0.931659
+Step 904 (38873) @ Episode 41/10000, loss: 124.36942291259766, reward -20.000000, eps 0.930030
+Step 1007 (39881) @ Episode 42/10000, loss: 124.38667297363281, reward -19.000000, eps 0.928216
+
+Copied model parameters to target network.
+Step 958 (40840) @ Episode 43/10000, loss: 124.24169158935547, reward -20.000000, eps 0.926490
+Step 926 (41767) @ Episode 44/10000, loss: 124.22038269042969, reward -20.000000, eps 0.924821
+Step 763 (42531) @ Episode 45/10000, loss: 124.19459533691406, reward -21.000000, eps 0.923446
+Step 973 (43505) @ Episode 46/10000, loss: 124.2150650024414, reward -20.000000, eps 0.921693
+Step 884 (44390) @ Episode 47/10000, loss: 124.20677947998047, reward -20.000000, eps 0.920100
+Step 905 (45296) @ Episode 48/10000, loss: 124.21760559082031, reward -20.000000, eps 0.918469
+Step 1020 (46317) @ Episode 49/10000, loss: 124.20916748046875, reward -20.000000, eps 0.916631
+Step 938 (47256) @ Episode 50/10000, loss: 124.21483612060547, reward -20.000000, eps 0.914941
+Step 931 (48188) @ Episode 51/10000, loss: 124.20651245117188, reward -20.000000, eps 0.913263
+Step 838 (49027) @ Episode 52/10000, loss: 124.2139663696289, reward -21.000000, eps 0.911753
+Step 763 (49791) @ Episode 53/10000, loss: 124.19758605957031, reward -21.000000, eps 0.910378
+
+Copied model parameters to target network.
+Step 851 (50643) @ Episode 54/10000, loss: 124.04883575439453, reward -21.000000, eps 0.908844
+Step 915 (51559) @ Episode 55/10000, loss: 123.97628784179688, reward -21.000000, eps 0.907195
+Step 819 (52379) @ Episode 56/10000, loss: 123.98323059082031, reward -21.000000, eps 0.905719
+Step 853 (53233) @ Episode 57/10000, loss: 123.97743225097656, reward -21.000000, eps 0.904182
+Step 945 (54179) @ Episode 58/10000, loss: 123.97653198242188, reward -21.000000, eps 0.902479
+Step 976 (55156) @ Episode 59/10000, loss: 123.98696899414062, reward -20.000000, eps 0.900721
+Step 847 (56004) @ Episode 60/10000, loss: 123.99032592773438, reward -21.000000, eps 0.899194
+Step 1049 (57054) @ Episode 61/10000, loss: 123.97723388671875, reward -20.000000, eps 0.897304
+Step 976 (58031) @ Episode 62/10000, loss: 123.97807312011719, reward -21.000000, eps 0.895546
+Step 842 (58874) @ Episode 63/10000, loss: 123.97412872314453, reward -20.000000, eps 0.894028
+Step 842 (59717) @ Episode 64/10000, loss: 123.96957397460938, reward -21.000000, eps 0.892511
+
+Copied model parameters to target network.
+Step 821 (60539) @ Episode 65/10000, loss: 123.81983947753906, reward -21.000000, eps 0.891031
+Step 899 (61439) @ Episode 66/10000, loss: 123.73513793945312, reward -21.000000, eps 0.889411
+Step 823 (62263) @ Episode 67/10000, loss: 123.7357406616211, reward -21.000000, eps 0.887928
+Step 918 (63182) @ Episode 68/10000, loss: 123.73095703125, reward -20.000000, eps 0.886274
+Step 899 (64082) @ Episode 69/10000, loss: 123.73259735107422, reward -20.000000, eps 0.884654
+Step 987 (65070) @ Episode 70/10000, loss: 123.7340087890625, reward -21.000000, eps 0.882876
+Step 763 (65834) @ Episode 71/10000, loss: 123.73527526855469, reward -21.000000, eps 0.881500
+Step 1030 (66865) @ Episode 72/10000, loss: 123.73640441894531, reward -19.000000, eps 0.879645
+Step 887 (67753) @ Episode 73/10000, loss: 123.72579193115234, reward -20.000000, eps 0.878046
+Step 965 (68719) @ Episode 74/10000, loss: 123.73506927490234, reward -20.000000, eps 0.876307
+Step 1031 (69751) @ Episode 75/10000, loss: 123.73546600341797, reward -19.000000, eps 0.874450
+
+Copied model parameters to target network.
+Step 791 (70543) @ Episode 76/10000, loss: 123.58148193359375, reward -21.000000, eps 0.873024
+Step 1084 (71628) @ Episode 77/10000, loss: 123.49938201904297, reward -20.000000, eps 0.871071
+Step 1129 (72758) @ Episode 78/10000, loss: 123.50287628173828, reward -19.000000, eps 0.869037
+Step 850 (73609) @ Episode 79/10000, loss: 123.49634552001953, reward -21.000000, eps 0.867505
+Step 1205 (74815) @ Episode 80/10000, loss: 123.50285339355469, reward -20.000000, eps 0.865335
+Step 964 (75780) @ Episode 81/10000, loss: 123.48812103271484, reward -20.000000, eps 0.863598
+Step 1149 (76930) @ Episode 82/10000, loss: 123.49860382080078, reward -18.000000, eps 0.861528
+Step 1139 (78070) @ Episode 83/10000, loss: 123.49855041503906, reward -17.000000, eps 0.859476
+Step 883 (78954) @ Episode 84/10000, loss: 123.50262451171875, reward -21.000000, eps 0.857884
+Step 963 (79918) @ Episode 85/10000, loss: 123.49677276611328, reward -20.000000, eps 0.856149
+
+Copied model parameters to target network.
+Step 1309 (81228) @ Episode 86/10000, loss: 123.2850570678711, reward -18.000000, eps 0.853791
+Step 903 (82132) @ Episode 87/10000, loss: 123.27265930175781, reward -20.000000, eps 0.852164
+Step 883 (83016) @ Episode 88/10000, loss: 123.27207946777344, reward -21.000000, eps 0.850573
+Step 912 (83929) @ Episode 89/10000, loss: 123.27416229248047, reward -21.000000, eps 0.848929
+Step 1007 (84937) @ Episode 90/10000, loss: 123.25806427001953, reward -20.000000, eps 0.847115
+Step 903 (85841) @ Episode 91/10000, loss: 123.27666473388672, reward -21.000000, eps 0.845488
+Step 919 (86761) @ Episode 92/10000, loss: 123.263671875, reward -20.000000, eps 0.843832
+Step 823 (87585) @ Episode 93/10000, loss: 123.27660369873047, reward -21.000000, eps 0.842348
+Step 936 (88522) @ Episode 94/10000, loss: 123.26715850830078, reward -21.000000, eps 0.840662
+Step 916 (89439) @ Episode 95/10000, loss: 123.26483917236328, reward -20.000000, eps 0.839011
+
+Copied model parameters to target network.
+Step 819 (90259) @ Episode 96/10000, loss: 123.21055603027344, reward -21.000000, eps 0.837535
+Step 1157 (91417) @ Episode 97/10000, loss: 123.06079864501953, reward -20.000000, eps 0.835451
+Step 913 (92331) @ Episode 98/10000, loss: 123.05924987792969, reward -21.000000, eps 0.833806
+Step 936 (93268) @ Episode 99/10000, loss: 123.05701446533203, reward -20.000000, eps 0.832119
+Step 763 (94032) @ Episode 100/10000, loss: 123.0567855834961, reward -21.000000, eps 0.830744
+Step 945 (94978) @ Episode 101/10000, loss: 123.05783081054688, reward -21.000000, eps 0.829041
+Step 1032 (96011) @ Episode 102/10000, loss: 123.05918884277344, reward -20.000000, eps 0.827182
+Step 944 (96956) @ Episode 103/10000, loss: 123.05775451660156, reward -21.000000, eps 0.825481
+Step 1000 (97957) @ Episode 104/10000, loss: 123.0536880493164, reward -20.000000, eps 0.823679
+Step 990 (98948) @ Episode 105/10000, loss: 123.06338500976562, reward -21.000000, eps 0.821895
+Step 823 (99772) @ Episode 106/10000, loss: 123.05867767333984, reward -21.000000, eps 0.820412
+
+Copied model parameters to target network.
+Step 883 (100656) @ Episode 107/10000, loss: 122.8729476928711, reward -21.000000, eps 0.818821
+Step 875 (101532) @ Episode 108/10000, loss: 122.8147201538086, reward -21.000000, eps 0.817244
+Step 933 (102466) @ Episode 109/10000, loss: 122.82171630859375, reward -21.000000, eps 0.815563
+Step 972 (103439) @ Episode 110/10000, loss: 122.81497192382812, reward -21.000000, eps 0.813811
+Step 1015 (104455) @ Episode 111/10000, loss: 122.81485748291016, reward -19.000000, eps 0.811982
+Step 879 (105335) @ Episode 112/10000, loss: 122.81065368652344, reward -21.000000, eps 0.810398
+Step 1015 (106351) @ Episode 113/10000, loss: 122.81646728515625, reward -18.000000, eps 0.808570
+Step 1003 (107355) @ Episode 114/10000, loss: 122.81593322753906, reward -20.000000, eps 0.806762
+Step 929 (108285) @ Episode 115/10000, loss: 122.81329345703125, reward -20.000000, eps 0.805088
+Step 1444 (109730) @ Episode 116/10000, loss: 122.81349182128906, reward -16.000000, eps 0.802487
+
+Copied model parameters to target network.
+Step 881 (110612) @ Episode 117/10000, loss: 122.64777374267578, reward -21.000000, eps 0.800900
+Step 839 (111452) @ Episode 118/10000, loss: 122.56703186035156, reward -21.000000, eps 0.799388
+Step 1267 (112720) @ Episode 119/10000, loss: 122.5673828125, reward -20.000000, eps 0.797105
+Step 1036 (113757) @ Episode 120/10000, loss: 122.56298065185547, reward -19.000000, eps 0.795239
+Step 990 (114748) @ Episode 121/10000, loss: 122.5558853149414, reward -21.000000, eps 0.793455
+Step 1129 (115878) @ Episode 122/10000, loss: 122.56800079345703, reward -20.000000, eps 0.791421
+Step 1098 (116977) @ Episode 123/10000, loss: 122.56939697265625, reward -20.000000, eps 0.789443
+Step 1004 (117982) @ Episode 124/10000, loss: 122.56656646728516, reward -20.000000, eps 0.787634
+Step 1232 (119215) @ Episode 125/10000, loss: 122.56853485107422, reward -20.000000, eps 0.785414
+
+Copied model parameters to target network.
+Step 1311 (120527) @ Episode 126/10000, loss: 122.4773941040039, reward -20.000000, eps 0.783053
+Step 1111 (121639) @ Episode 127/10000, loss: 122.33255004882812, reward -19.000000, eps 0.781051
+Step 1097 (122737) @ Episode 128/10000, loss: 122.32940673828125, reward -19.000000, eps 0.779075
+Step 1039 (123777) @ Episode 129/10000, loss: 122.33193969726562, reward -20.000000, eps 0.777203
+Step 994 (124772) @ Episode 130/10000, loss: 122.33453369140625, reward -20.000000, eps 0.775412
+Step 782 (125555) @ Episode 131/10000, loss: 122.33110046386719, reward -21.000000, eps 0.774002
+Step 1163 (126719) @ Episode 132/10000, loss: 122.33773803710938, reward -18.000000, eps 0.771907
+Step 964 (127684) @ Episode 133/10000, loss: 122.33641815185547, reward -19.000000, eps 0.770170
+Step 995 (128680) @ Episode 134/10000, loss: 122.33576202392578, reward -19.000000, eps 0.768377
+Step 1266 (129947) @ Episode 135/10000, loss: 122.33692169189453, reward -20.000000, eps 0.766097
+
+Copied model parameters to target network.
+Step 979 (130927) @ Episode 136/10000, loss: 122.12664031982422, reward -20.000000, eps 0.764333
+Step 1256 (132184) @ Episode 137/10000, loss: 122.10905456542969, reward -17.000000, eps 0.762070
+Step 879 (133064) @ Episode 138/10000, loss: 122.10980987548828, reward -21.000000, eps 0.760486
+Step 1217 (134282) @ Episode 139/10000, loss: 122.10852813720703, reward -19.000000, eps 0.758294
+Step 998 (135281) @ Episode 140/10000, loss: 122.11312866210938, reward -21.000000, eps 0.756496
+Step 1177 (136459) @ Episode 141/10000, loss: 122.11083221435547, reward -18.000000, eps 0.754375
+Step 1088 (137548) @ Episode 142/10000, loss: 122.11347961425781, reward -19.000000, eps 0.752415
+Step 1184 (138733) @ Episode 143/10000, loss: 122.1144790649414, reward -19.000000, eps 0.750282
+Step 989 (139723) @ Episode 144/10000, loss: 122.10973358154297, reward -21.000000, eps 0.748500
+
+Copied model parameters to target network.
+Step 1237 (140961) @ Episode 145/10000, loss: 121.93711853027344, reward -18.000000, eps 0.746271
+Step 937 (141899) @ Episode 146/10000, loss: 121.88429260253906, reward -20.000000, eps 0.744583
+Step 1037 (142937) @ Episode 147/10000, loss: 121.89042663574219, reward -21.000000, eps 0.742715
+Step 1217 (144155) @ Episode 148/10000, loss: 121.89230346679688, reward -18.000000, eps 0.740522
+Step 930 (145086) @ Episode 149/10000, loss: 121.89193725585938, reward -21.000000, eps 0.738846
+Step 1201 (146288) @ Episode 150/10000, loss: 121.88822937011719, reward -18.000000, eps 0.736683
+Step 1156 (147445) @ Episode 151/10000, loss: 121.88666534423828, reward -21.000000, eps 0.734600
+Step 1095 (148541) @ Episode 152/10000, loss: 121.89065551757812, reward -19.000000, eps 0.732627
+Step 1348 (149890) @ Episode 153/10000, loss: 121.89594268798828, reward -20.000000, eps 0.730199
+
+Copied model parameters to target network.
+Step 1131 (151022) @ Episode 154/10000, loss: 121.69255065917969, reward -19.000000, eps 0.728162
+Step 1123 (152146) @ Episode 155/10000, loss: 121.66909790039062, reward -19.000000, eps 0.726138
+Step 1216 (153363) @ Episode 156/10000, loss: 121.67138671875, reward -18.000000, eps 0.723948
+Step 1259 (154623) @ Episode 157/10000, loss: 121.66654205322266, reward -19.000000, eps 0.721680
+Step 1181 (155805) @ Episode 158/10000, loss: 121.67088317871094, reward -18.000000, eps 0.719552
+Step 1252 (157058) @ Episode 159/10000, loss: 121.66552734375, reward -18.000000, eps 0.717297
+Step 1196 (158255) @ Episode 160/10000, loss: 121.66787719726562, reward -19.000000, eps 0.715142
+Step 977 (159233) @ Episode 161/10000, loss: 121.66384887695312, reward -21.000000, eps 0.713382
+
+Copied model parameters to target network.
+Step 1285 (160519) @ Episode 162/10000, loss: 121.58332824707031, reward -18.000000, eps 0.711067
+Step 1146 (161666) @ Episode 163/10000, loss: 121.44984436035156, reward -21.000000, eps 0.709002
+Step 1251 (162918) @ Episode 164/10000, loss: 121.4476318359375, reward -18.000000, eps 0.706749
+Step 1210 (164129) @ Episode 165/10000, loss: 121.44776916503906, reward -19.000000, eps 0.704569
+Step 1207 (165337) @ Episode 166/10000, loss: 121.4462661743164, reward -20.000000, eps 0.702395
+Step 1373 (166711) @ Episode 167/10000, loss: 121.44941711425781, reward -17.000000, eps 0.699921
+Step 1293 (168005) @ Episode 168/10000, loss: 121.45389556884766, reward -20.000000, eps 0.697592
+Step 1174 (169180) @ Episode 169/10000, loss: 121.44893646240234, reward -20.000000, eps 0.695477
+
+Copied model parameters to target network.
+Step 1220 (170401) @ Episode 170/10000, loss: 121.37210845947266, reward -19.000000, eps 0.693279
+Step 1090 (171492) @ Episode 171/10000, loss: 121.20423126220703, reward -20.000000, eps 0.691316
+Step 1406 (172899) @ Episode 172/10000, loss: 121.19954681396484, reward -18.000000, eps 0.688783
+Step 1111 (174011) @ Episode 173/10000, loss: 121.19868469238281, reward -21.000000, eps 0.686781
+Step 1348 (175360) @ Episode 174/10000, loss: 121.20381927490234, reward -19.000000, eps 0.684353
+Step 1257 (176618) @ Episode 175/10000, loss: 121.20280456542969, reward -17.000000, eps 0.682089
+Step 1296 (177915) @ Episode 176/10000, loss: 121.20118713378906, reward -19.000000, eps 0.679754
+Step 1300 (179216) @ Episode 177/10000, loss: 121.20174407958984, reward -21.000000, eps 0.677412
+
+Copied model parameters to target network.
+Step 1248 (180465) @ Episode 178/10000, loss: 121.12545013427734, reward -20.000000, eps 0.675164
+Step 1258 (181724) @ Episode 179/10000, loss: 120.99689483642578, reward -19.000000, eps 0.672898
+Step 1110 (182835) @ Episode 180/10000, loss: 120.99699401855469, reward -20.000000, eps 0.670898
+Step 1232 (184068) @ Episode 181/10000, loss: 120.99290466308594, reward -19.000000, eps 0.668679
+Step 1190 (185259) @ Episode 182/10000, loss: 120.99458312988281, reward -19.000000, eps 0.666535
+Step 1499 (186759) @ Episode 183/10000, loss: 120.99264526367188, reward -19.000000, eps 0.663835
+Step 1112 (187872) @ Episode 184/10000, loss: 120.9913101196289, reward -20.000000, eps 0.661832
+Step 1220 (189093) @ Episode 185/10000, loss: 121.0000228881836, reward -21.000000, eps 0.659634
+
+Copied model parameters to target network.
+Step 1403 (190497) @ Episode 186/10000, loss: 120.91704559326172, reward -18.000000, eps 0.657107
+Step 1435 (191933) @ Episode 187/10000, loss: 120.77709197998047, reward -17.000000, eps 0.654522
+Step 1257 (193191) @ Episode 188/10000, loss: 120.77632904052734, reward -19.000000, eps 0.652257
+Step 1180 (194372) @ Episode 189/10000, loss: 120.78191375732422, reward -18.000000, eps 0.650132
+Step 1195 (195568) @ Episode 190/10000, loss: 120.7808609008789, reward -20.000000, eps 0.647979
+Step 1746 (197315) @ Episode 191/10000, loss: 120.77970123291016, reward -17.000000, eps 0.644834
+Step 1167 (198483) @ Episode 192/10000, loss: 120.78162384033203, reward -20.000000, eps 0.642732
+Step 879 (199363) @ Episode 193/10000, loss: 120.78300476074219, reward -21.000000, eps 0.641148
+
+Copied model parameters to target network.
+Step 1504 (200868) @ Episode 194/10000, loss: 120.66632080078125, reward -17.000000, eps 0.638439
+Step 1233 (202102) @ Episode 195/10000, loss: 120.58616638183594, reward -19.000000, eps 0.636217
+Step 1032 (203135) @ Episode 196/10000, loss: 120.58203125, reward -21.000000, eps 0.634358
+Step 1558 (204694) @ Episode 197/10000, loss: 120.58589935302734, reward -18.000000, eps 0.631552
+Step 1172 (205867) @ Episode 198/10000, loss: 120.58229064941406, reward -18.000000, eps 0.629440
+Step 1104 (206972) @ Episode 199/10000, loss: 120.58029174804688, reward -20.000000, eps 0.627451
+Step 1424 (208397) @ Episode 200/10000, loss: 120.58179473876953, reward -20.000000, eps 0.624886
+Step 1199 (209597) @ Episode 201/10000, loss: 120.58516693115234, reward -20.000000, eps 0.622726
+
+Copied model parameters to target network.
+Step 1462 (211060) @ Episode 202/10000, loss: 120.42462921142578, reward -17.000000, eps 0.620093
+Step 1092 (212153) @ Episode 203/10000, loss: 120.3626937866211, reward -19.000000, eps 0.618126
+Step 1490 (213644) @ Episode 204/10000, loss: 120.36219024658203, reward -20.000000, eps 0.615442
+Step 1630 (215275) @ Episode 205/10000, loss: 120.36674499511719, reward -17.000000, eps 0.612506
+Step 1188 (216464) @ Episode 206/10000, loss: 120.36418151855469, reward -19.000000, eps 0.610366
+Step 1219 (217684) @ Episode 207/10000, loss: 120.3602294921875, reward -19.000000, eps 0.608170
+Step 1884 (219569) @ Episode 208/10000, loss: 120.36296081542969, reward -17.000000, eps 0.604777
+
+Copied model parameters to target network.
+Step 1562 (221132) @ Episode 209/10000, loss: 120.20687103271484, reward -18.000000, eps 0.601963
+Step 1188 (222321) @ Episode 210/10000, loss: 120.14216613769531, reward -20.000000, eps 0.599823
+Step 1639 (223961) @ Episode 211/10000, loss: 120.14009857177734, reward -18.000000, eps 0.596871
+Step 1431 (225393) @ Episode 212/10000, loss: 120.13532257080078, reward -19.000000, eps 0.594294
+Step 1413 (226807) @ Episode 213/10000, loss: 120.14037322998047, reward -16.000000, eps 0.591748
+Step 1619 (228427) @ Episode 214/10000, loss: 120.14014434814453, reward -18.000000, eps 0.588832
+Step 1283 (229711) @ Episode 215/10000, loss: 120.13739013671875, reward -18.000000, eps 0.586521
+
+Copied model parameters to target network.
+Step 993 (230705) @ Episode 216/10000, loss: 119.98224639892578, reward -21.000000, eps 0.584732
+Step 1660 (232366) @ Episode 217/10000, loss: 119.91000366210938, reward -16.000000, eps 0.581742
+Step 1443 (233810) @ Episode 218/10000, loss: 119.9137191772461, reward -18.000000, eps 0.579143
+Step 1353 (235164) @ Episode 219/10000, loss: 119.90971374511719, reward -17.000000, eps 0.576706
+Step 2039 (237204) @ Episode 220/10000, loss: 119.90770721435547, reward -18.000000, eps 0.573034
+Step 1311 (238516) @ Episode 221/10000, loss: 119.91151428222656, reward -18.000000, eps 0.570672
+Step 1375 (239892) @ Episode 222/10000, loss: 119.91092681884766, reward -18.000000, eps 0.568195
+
+Copied model parameters to target network.
+Step 1077 (240970) @ Episode 223/10000, loss: 119.70600891113281, reward -19.000000, eps 0.566255
+Step 1107 (242078) @ Episode 224/10000, loss: 119.68366241455078, reward -21.000000, eps 0.564261
+Step 1754 (243833) @ Episode 225/10000, loss: 119.68301391601562, reward -15.000000, eps 0.561102
+Step 1360 (245194) @ Episode 226/10000, loss: 119.68431091308594, reward -19.000000, eps 0.558652
+Step 2137 (247332) @ Episode 227/10000, loss: 119.68238067626953, reward -14.000000, eps 0.554803
+Step 1504 (248837) @ Episode 228/10000, loss: 119.6804428100586, reward -19.000000, eps 0.552094
+
+Copied model parameters to target network.
+Step 1571 (250409) @ Episode 229/10000, loss: 119.6622543334961, reward -16.000000, eps 0.549265
+Step 1660 (252070) @ Episode 230/10000, loss: 119.59294891357422, reward -16.000000, eps 0.546275
+Step 1589 (253660) @ Episode 231/10000, loss: 119.59545135498047, reward -18.000000, eps 0.543413
+Step 1508 (255169) @ Episode 232/10000, loss: 119.59142303466797, reward -20.000000, eps 0.540697
+Step 1404 (256574) @ Episode 233/10000, loss: 119.5938720703125, reward -16.000000, eps 0.538168
+Step 1311 (257886) @ Episode 234/10000, loss: 119.5967025756836, reward -21.000000, eps 0.535806
+Step 1149 (259036) @ Episode 235/10000, loss: 119.59284210205078, reward -20.000000, eps 0.533736
+
+Copied model parameters to target network.
+Step 2395 (261432) @ Episode 236/10000, loss: 119.44834899902344, reward -12.000000, eps 0.529423
+Step 1326 (262759) @ Episode 237/10000, loss: 119.34684753417969, reward -17.000000, eps 0.527035
+Step 1567 (264327) @ Episode 238/10000, loss: 119.34754943847656, reward -19.000000, eps 0.524212
+Step 1644 (265972) @ Episode 239/10000, loss: 119.35476684570312, reward -17.000000, eps 0.521251
+Step 1484 (267457) @ Episode 240/10000, loss: 119.34751892089844, reward -19.000000, eps 0.518578
+Step 1623 (269081) @ Episode 241/10000, loss: 119.34876251220703, reward -17.000000, eps 0.515655
+
+Copied model parameters to target network.
+Step 1499 (270581) @ Episode 242/10000, loss: 119.25067901611328, reward -19.000000, eps 0.512955
+Step 1441 (272023) @ Episode 243/10000, loss: 119.1043930053711, reward -17.000000, eps 0.510359
+Step 1861 (273885) @ Episode 244/10000, loss: 119.09959411621094, reward -15.000000, eps 0.507008
+Step 1406 (275292) @ Episode 245/10000, loss: 119.09610748291016, reward -18.000000, eps 0.504475
+Step 1455 (276748) @ Episode 246/10000, loss: 119.09532928466797, reward -19.000000, eps 0.501854
+Step 1995 (278744) @ Episode 247/10000, loss: 119.1001205444336, reward -16.000000, eps 0.498262
+
+Copied model parameters to target network.
+Step 1545 (280290) @ Episode 248/10000, loss: 119.05226135253906, reward -19.000000, eps 0.495479
+Step 1717 (282008) @ Episode 249/10000, loss: 118.841552734375, reward -17.000000, eps 0.492386
+Step 2115 (284124) @ Episode 250/10000, loss: 118.8424301147461, reward -16.000000, eps 0.488578
+Step 1875 (286000) @ Episode 251/10000, loss: 118.84017181396484, reward -18.000000, eps 0.485201
+Step 1589 (287590) @ Episode 252/10000, loss: 118.84345245361328, reward -20.000000, eps 0.482339
+Step 1426 (289017) @ Episode 253/10000, loss: 118.83856201171875, reward -18.000000, eps 0.479770
+
+Copied model parameters to target network.
+Step 1429 (290447) @ Episode 254/10000, loss: 118.7599105834961, reward -20.000000, eps 0.477196
+Step 1765 (292213) @ Episode 255/10000, loss: 118.58902740478516, reward -17.000000, eps 0.474017
+Step 2049 (294263) @ Episode 256/10000, loss: 118.58756256103516, reward -16.000000, eps 0.470327
+Step 1670 (295934) @ Episode 257/10000, loss: 118.58512115478516, reward -17.000000, eps 0.467320
+Step 2004 (297939) @ Episode 258/10000, loss: 118.58528900146484, reward -17.000000, eps 0.463711
+Step 1602 (299542) @ Episode 259/10000, loss: 118.58477020263672, reward -17.000000, eps 0.460825
+
+Copied model parameters to target network.
+Step 1661 (301204) @ Episode 260/10000, loss: 118.4149398803711, reward -18.000000, eps 0.457834
+Step 1356 (302561) @ Episode 261/10000, loss: 118.3449935913086, reward -20.000000, eps 0.455391
+Step 2275 (304837) @ Episode 262/10000, loss: 118.34891510009766, reward -14.000000, eps 0.451294
+Step 1431 (306269) @ Episode 263/10000, loss: 118.3485107421875, reward -20.000000, eps 0.448716
+Step 1260 (307530) @ Episode 264/10000, loss: 118.3492660522461, reward -19.000000, eps 0.446447
+Step 2201 (309732) @ Episode 265/10000, loss: 118.34886169433594, reward -16.000000, eps 0.442483
+
+Copied model parameters to target network.
+Step 1365 (311098) @ Episode 266/10000, loss: 118.1439208984375, reward -19.000000, eps 0.440024
+Step 1444 (312543) @ Episode 267/10000, loss: 118.0888442993164, reward -19.000000, eps 0.437423
+Step 1367 (313911) @ Episode 268/10000, loss: 118.09517669677734, reward -21.000000, eps 0.434961
+Step 1637 (315549) @ Episode 269/10000, loss: 118.09063720703125, reward -18.000000, eps 0.432012
+Step 1307 (316857) @ Episode 270/10000, loss: 118.0897445678711, reward -19.000000, eps 0.429658
+Step 1755 (318613) @ Episode 271/10000, loss: 118.0855941772461, reward -17.000000, eps 0.426497
+
+Copied model parameters to target network.
+Step 1463 (320077) @ Episode 272/10000, loss: 118.07026672363281, reward -19.000000, eps 0.423862
+Step 1338 (321416) @ Episode 273/10000, loss: 117.83460235595703, reward -21.000000, eps 0.421452
+Step 2369 (323786) @ Episode 274/10000, loss: 117.8340072631836, reward -15.000000, eps 0.417186
+Step 1941 (325728) @ Episode 275/10000, loss: 117.8350601196289, reward -15.000000, eps 0.413690
+Step 2359 (328088) @ Episode 276/10000, loss: 117.8336181640625, reward -13.000000, eps 0.409442
+Step 1502 (329591) @ Episode 277/10000, loss: 117.83537292480469, reward -20.000000, eps 0.406737
+
+Copied model parameters to target network.
+Step 1593 (331185) @ Episode 278/10000, loss: 117.66854095458984, reward -18.000000, eps 0.403868
+Step 1783 (332969) @ Episode 279/10000, loss: 117.60968017578125, reward -15.000000, eps 0.400656
+Step 1553 (334523) @ Episode 280/10000, loss: 117.60708618164062, reward -19.000000, eps 0.397859
+Step 1673 (336197) @ Episode 281/10000, loss: 117.6100845336914, reward -18.000000, eps 0.394846
+Step 1829 (338027) @ Episode 282/10000, loss: 117.6123275756836, reward -20.000000, eps 0.391552
+Step 1442 (339470) @ Episode 283/10000, loss: 117.60965728759766, reward -20.000000, eps 0.388955
+
+Copied model parameters to target network.
+Step 2181 (341652) @ Episode 284/10000, loss: 117.39765930175781, reward -18.000000, eps 0.385027
+Step 1652 (343305) @ Episode 285/10000, loss: 117.32640838623047, reward -15.000000, eps 0.382052
+Step 1501 (344807) @ Episode 286/10000, loss: 117.32488250732422, reward -18.000000, eps 0.379348
+Step 1754 (346562) @ Episode 287/10000, loss: 117.32718658447266, reward -17.000000, eps 0.376189
+Step 1571 (348134) @ Episode 288/10000, loss: 117.32502746582031, reward -19.000000, eps 0.373359
+
+Copied model parameters to target network.
+Step 1947 (350082) @ Episode 289/10000, loss: 117.31564331054688, reward -16.000000, eps 0.369853
+Step 1647 (351730) @ Episode 290/10000, loss: 117.08262634277344, reward -16.000000, eps 0.366887
+Step 1448 (353179) @ Episode 291/10000, loss: 117.0811538696289, reward -18.000000, eps 0.364278
+Step 1533 (354713) @ Episode 292/10000, loss: 117.078125, reward -18.000000, eps 0.361517
+Step 2213 (356927) @ Episode 293/10000, loss: 117.08282470703125, reward -16.000000, eps 0.357532
+Step 1547 (358475) @ Episode 294/10000, loss: 117.07968139648438, reward -18.000000, eps 0.354746
+
+Copied model parameters to target network.
+Step 1964 (360440) @ Episode 295/10000, loss: 117.02665710449219, reward -19.000000, eps 0.351209
+Step 1960 (362401) @ Episode 296/10000, loss: 116.83643341064453, reward -13.000000, eps 0.347679
+Step 1926 (364328) @ Episode 297/10000, loss: 116.83844757080078, reward -17.000000, eps 0.344210
+Step 1853 (366182) @ Episode 298/10000, loss: 116.83711242675781, reward -19.000000, eps 0.340873
+Step 2150 (368333) @ Episode 299/10000, loss: 116.83936309814453, reward -12.000000, eps 0.337001
+
+Copied model parameters to target network.
+Step 1943 (370277) @ Episode 300/10000, loss: 116.8046646118164, reward -17.000000, eps 0.333502
+Step 1799 (372077) @ Episode 301/10000, loss: 116.58639526367188, reward -18.000000, eps 0.330262
+Step 1681 (373759) @ Episode 302/10000, loss: 116.58656311035156, reward -16.000000, eps 0.327234
+Step 2024 (375784) @ Episode 303/10000, loss: 116.5860366821289, reward -17.000000, eps 0.323589
+Step 2059 (377844) @ Episode 304/10000, loss: 116.58602905273438, reward -13.000000, eps 0.319881
+Step 2011 (379856) @ Episode 305/10000, loss: 116.58617401123047, reward -16.000000, eps 0.316260
+
+Copied model parameters to target network.
+Step 1904 (381761) @ Episode 306/10000, loss: 116.43051147460938, reward -21.000000, eps 0.312831
+Step 1755 (383517) @ Episode 307/10000, loss: 116.41629028320312, reward -16.000000, eps 0.309670
+Step 2096 (385614) @ Episode 308/10000, loss: 116.41517639160156, reward -16.000000, eps 0.305895
+Step 1799 (387414) @ Episode 309/10000, loss: 116.42005157470703, reward -16.000000, eps 0.302655
+Step 1988 (389403) @ Episode 310/10000, loss: 116.42111206054688, reward -17.000000, eps 0.299075
+
+Copied model parameters to target network.
+Step 1467 (390871) @ Episode 311/10000, loss: 116.25550079345703, reward -21.000000, eps 0.296433
+Step 1526 (392398) @ Episode 312/10000, loss: 116.14290618896484, reward -19.000000, eps 0.293684
+Step 1647 (394046) @ Episode 313/10000, loss: 116.15589141845703, reward -17.000000, eps 0.290718
+Step 1873 (395920) @ Episode 314/10000, loss: 116.14413452148438, reward -19.000000, eps 0.287344
+Step 2892 (398813) @ Episode 315/10000, loss: 116.14707946777344, reward -12.000000, eps 0.282137
+
+Copied model parameters to target network.
+Step 1930 (400744) @ Episode 316/10000, loss: 116.0525131225586, reward -16.000000, eps 0.278661
+Step 1728 (402473) @ Episode 317/10000, loss: 115.90028381347656, reward -17.000000, eps 0.275549
+Step 1962 (404436) @ Episode 318/10000, loss: 115.90067291259766, reward -17.000000, eps 0.272016
+Step 2508 (406945) @ Episode 319/10000, loss: 115.90193939208984, reward -11.000000, eps 0.267499
+Step 2132 (409078) @ Episode 320/10000, loss: 115.89739227294922, reward -12.000000, eps 0.263660
+
+Copied model parameters to target network.
+Step 2786 (411865) @ Episode 321/10000, loss: 115.72831726074219, reward -11.000000, eps 0.258643
+Step 1798 (413664) @ Episode 322/10000, loss: 115.64154815673828, reward -16.000000, eps 0.255405
+Step 1624 (415289) @ Episode 323/10000, loss: 115.64102172851562, reward -18.000000, eps 0.252480
+Step 2166 (417456) @ Episode 324/10000, loss: 115.6425552368164, reward -13.000000, eps 0.248579
+Step 2393 (419850) @ Episode 325/10000, loss: 115.64472198486328, reward -12.000000, eps 0.244270
+
+Copied model parameters to target network.
+Step 2709 (422560) @ Episode 326/10000, loss: 115.41941833496094, reward -14.000000, eps 0.239392
+Step 1911 (424472) @ Episode 327/10000, loss: 115.4060287475586, reward -18.000000, eps 0.235951
+Step 2267 (426740) @ Episode 328/10000, loss: 115.4074935913086, reward -16.000000, eps 0.231868
+Step 2807 (429548) @ Episode 329/10000, loss: 115.41075897216797, reward -13.000000, eps 0.226814
+
+Copied model parameters to target network.
+Step 2636 (432185) @ Episode 330/10000, loss: 115.17289733886719, reward -14.000000, eps 0.222067
+Step 1844 (434030) @ Episode 331/10000, loss: 115.12451171875, reward -17.000000, eps 0.218746
+Step 2762 (436793) @ Episode 332/10000, loss: 115.123779296875, reward -11.000000, eps 0.213773
+Step 2243 (439037) @ Episode 333/10000, loss: 115.12391662597656, reward -16.000000, eps 0.209734
+
+Copied model parameters to target network.
+Step 3621 (442659) @ Episode 334/10000, loss: 114.95936584472656, reward -1.000000, eps 0.203214
+Step 2881 (445541) @ Episode 335/10000, loss: 114.89662170410156, reward -9.000000, eps 0.198026
+Step 2236 (447778) @ Episode 336/10000, loss: 114.8951187133789, reward -14.000000, eps 0.194000
+
+Copied model parameters to target network.
+Step 2438 (450217) @ Episode 337/10000, loss: 114.87079620361328, reward -11.000000, eps 0.189610
+Step 2331 (452549) @ Episode 338/10000, loss: 114.63652801513672, reward -15.000000, eps 0.185412
+Step 2814 (455364) @ Episode 339/10000, loss: 114.6329574584961, reward -13.000000, eps 0.180345
+Step 2428 (457793) @ Episode 340/10000, loss: 114.63369750976562, reward -9.000000, eps 0.175973
+
+Copied model parameters to target network.
+Step 3176 (460970) @ Episode 341/10000, loss: 114.56182861328125, reward -8.000000, eps 0.170254
+Step 2303 (463274) @ Episode 342/10000, loss: 114.40052795410156, reward -14.000000, eps 0.166107
+Step 1928 (465203) @ Episode 343/10000, loss: 114.39625549316406, reward -19.000000, eps 0.162635
+Step 2949 (468153) @ Episode 344/10000, loss: 114.40115356445312, reward -11.000000, eps 0.157325
+
+Copied model parameters to target network.
+Step 2066 (470220) @ Episode 345/10000, loss: 114.37503814697266, reward -18.000000, eps 0.153604
+Step 2799 (473020) @ Episode 346/10000, loss: 114.1523666381836, reward -9.000000, eps 0.148564
+Step 2563 (475584) @ Episode 347/10000, loss: 114.14909362792969, reward -14.000000, eps 0.143949
+Step 2710 (478295) @ Episode 348/10000, loss: 114.1473388671875, reward -12.000000, eps 0.139069
+
+Copied model parameters to target network.
+Step 3184 (481480) @ Episode 349/10000, loss: 114.02674865722656, reward 6.000000, eps 0.133336
+Step 3052 (484533) @ Episode 350/10000, loss: 113.88459014892578, reward -12.000000, eps 0.127841
+Step 2713 (487247) @ Episode 351/10000, loss: 113.88603973388672, reward -10.000000, eps 0.122955
+
+Copied model parameters to target network.
+Step 2858 (490106) @ Episode 352/10000, loss: 113.8750228881836, reward -9.000000, eps 0.117809
+Step 2681 (492788) @ Episode 353/10000, loss: 113.65049743652344, reward -9.000000, eps 0.112982
+Step 3619 (496408) @ Episode 354/10000, loss: 113.64710235595703, reward -2.000000, eps 0.106466
+
+Copied model parameters to target network.
+Step 3608 (500017) @ Episode 355/10000, loss: 113.64474487304688, reward 5.000000, eps 0.100000
+Step 3436 (503454) @ Episode 356/10000, loss: 113.38481903076172, reward -3.000000, eps 0.100000
+Step 2244 (505699) @ Episode 357/10000, loss: 113.38272094726562, reward -14.000000, eps 0.100000
+Step 3099 (508799) @ Episode 358/10000, loss: 113.38326263427734, reward -7.000000, eps 0.100000
+
+Copied model parameters to target network.
+Step 2638 (511438) @ Episode 359/10000, loss: 113.23955535888672, reward -14.000000, eps 0.100000
+Step 2951 (514390) @ Episode 360/10000, loss: 113.11678314208984, reward -9.000000, eps 0.100000
+Step 3709 (518100) @ Episode 361/10000, loss: 113.11671447753906, reward -8.000000, eps 0.100000
+
+Copied model parameters to target network.
+Step 3313 (521414) @ Episode 362/10000, loss: 113.00060272216797, reward -4.000000, eps 0.100000
+Step 4169 (525584) @ Episode 363/10000, loss: 112.84455108642578, reward -2.000000, eps 0.100000
+Step 3520 (529105) @ Episode 364/10000, loss: 112.84368133544922, reward -2.000000, eps 0.100000
+
+Copied model parameters to target network.
+Step 3792 (532898) @ Episode 365/10000, loss: 112.6563720703125, reward 1.000000, eps 0.100000
+Step 3360 (536259) @ Episode 366/10000, loss: 112.59727478027344, reward -7.000000, eps 0.100000
+Step 2839 (539099) @ Episode 367/10000, loss: 112.59407806396484, reward -14.000000, eps 0.100000
+
+Copied model parameters to target network.
+Step 3203 (542303) @ Episode 368/10000, loss: 112.40943908691406, reward -11.000000, eps 0.100000
+Step 3110 (545414) @ Episode 369/10000, loss: 112.33477783203125, reward 8.000000, eps 0.100000
+Step 3161 (548576) @ Episode 370/10000, loss: 112.33749389648438, reward 12.000000, eps 0.100000
+
+Copied model parameters to target network.
+Step 2746 (551323) @ Episode 371/10000, loss: 112.20645141601562, reward 11.000000, eps 0.100000
+Step 2837 (554161) @ Episode 372/10000, loss: 112.06393432617188, reward 8.000000, eps 0.100000
+Step 3204 (557366) @ Episode 373/10000, loss: 112.06108856201172, reward 4.000000, eps 0.100000
+
+Copied model parameters to target network.
+Step 3376 (560743) @ Episode 374/10000, loss: 112.01164245605469, reward 9.000000, eps 0.100000
+Step 2188 (562932) @ Episode 375/10000, loss: 111.81639099121094, reward 14.000000, eps 0.100000
+Step 2914 (565847) @ Episode 376/10000, loss: 111.81149291992188, reward 9.000000, eps 0.100000
+Step 2619 (568467) @ Episode 377/10000, loss: 111.80691528320312, reward 13.000000, eps 0.100000
+
+Copied model parameters to target network.
+Step 2947 (571415) @ Episode 378/10000, loss: 111.67487335205078, reward 7.000000, eps 0.100000
+Step 3225 (574641) @ Episode 379/10000, loss: 111.52798461914062, reward 2.000000, eps 0.100000
+Step 2988 (577630) @ Episode 380/10000, loss: 111.52600860595703, reward 8.000000, eps 0.100000
+
+Copied model parameters to target network.
+Step 3117 (580748) @ Episode 381/10000, loss: 111.46097564697266, reward 5.000000, eps 0.100000
+Step 2177 (582926) @ Episode 382/10000, loss: 111.27239227294922, reward 15.000000, eps 0.100000
+Step 3015 (585942) @ Episode 383/10000, loss: 111.2720718383789, reward 9.000000, eps 0.100000
+Step 2950 (588893) @ Episode 384/10000, loss: 111.26763153076172, reward 8.000000, eps 0.100000
+
+Copied model parameters to target network.
+Step 3297 (592191) @ Episode 385/10000, loss: 111.13626861572266, reward 4.000000, eps 0.100000
+Step 2940 (595132) @ Episode 386/10000, loss: 111.0634994506836, reward -7.000000, eps 0.100000
+Step 2660 (597793) @ Episode 387/10000, loss: 111.06583404541016, reward 8.000000, eps 0.100000
+
+Copied model parameters to target network.
+Step 2922 (600716) @ Episode 388/10000, loss: 111.00495910644531, reward 9.000000, eps 0.100000
+Step 3267 (603984) @ Episode 389/10000, loss: 110.80316925048828, reward -3.000000, eps 0.100000
+Step 3133 (607118) @ Episode 390/10000, loss: 110.80428314208984, reward 4.000000, eps 0.100000
+
+Copied model parameters to target network.
+Step 4068 (611187) @ Episode 391/10000, loss: 110.74138641357422, reward -2.000000, eps 0.100000
+Step 3226 (614414) @ Episode 392/10000, loss: 110.57685852050781, reward 9.000000, eps 0.100000
+Step 3181 (617596) @ Episode 393/10000, loss: 110.57653045654297, reward 9.000000, eps 0.100000
+
+Copied model parameters to target network.
+Step 3209 (620806) @ Episode 394/10000, loss: 110.52215576171875, reward 7.000000, eps 0.100000
+Step 3155 (623962) @ Episode 395/10000, loss: 110.34813690185547, reward 4.000000, eps 0.100000
+Step 2740 (626703) @ Episode 396/10000, loss: 110.34608459472656, reward 8.000000, eps 0.100000
+
+Copied model parameters to target network.
+Step 3932 (630636) @ Episode 397/10000, loss: 110.30555725097656, reward 5.000000, eps 0.100000
+Step 3460 (634097) @ Episode 398/10000, loss: 110.10708618164062, reward 5.000000, eps 0.100000
+Step 2612 (636710) @ Episode 399/10000, loss: 110.10306549072266, reward 15.000000, eps 0.100000
+Step 2829 (639540) @ Episode 400/10000, loss: 110.10017395019531, reward 12.000000, eps 0.100000
+
+Copied model parameters to target network.
+Step 2736 (642277) @ Episode 401/10000, loss: 109.91020965576172, reward 11.000000, eps 0.100000
+Step 3126 (645404) @ Episode 402/10000, loss: 109.86275482177734, reward 6.000000, eps 0.100000
+Step 3367 (648772) @ Episode 403/10000, loss: 109.86346435546875, reward 1.000000, eps 0.100000
+
+Copied model parameters to target network.
+Step 2410 (651183) @ Episode 404/10000, loss: 109.7601089477539, reward 14.000000, eps 0.100000
+Step 3001 (654185) @ Episode 405/10000, loss: 109.6438217163086, reward 9.000000, eps 0.100000
+Step 2197 (656383) @ Episode 406/10000, loss: 109.63765716552734, reward 15.000000, eps 0.100000
+Step 3209 (659593) @ Episode 407/10000, loss: 109.64305114746094, reward 3.000000, eps 0.100000
+
+Copied model parameters to target network.
+Step 3547 (663141) @ Episode 408/10000, loss: 109.46605682373047, reward 4.000000, eps 0.100000
+Step 3740 (666882) @ Episode 409/10000, loss: 109.43826293945312, reward 5.000000, eps 0.100000
+Step 2752 (669635) @ Episode 410/10000, loss: 109.43805694580078, reward 12.000000, eps 0.100000
+
+Copied model parameters to target network.
+Step 3394 (673030) @ Episode 411/10000, loss: 109.20896911621094, reward 7.000000, eps 0.100000
+Step 2517 (675548) @ Episode 412/10000, loss: 109.18017578125, reward 16.000000, eps 0.100000
+Step 2602 (678151) @ Episode 413/10000, loss: 109.17399597167969, reward 13.000000, eps 0.100000
+
+Copied model parameters to target network.
+Step 3130 (681282) @ Episode 414/10000, loss: 109.0963134765625, reward 11.000000, eps 0.100000
+Step 1942 (683225) @ Episode 415/10000, loss: 108.98441314697266, reward 17.000000, eps 0.100000
+Step 2562 (685788) @ Episode 416/10000, loss: 108.97859191894531, reward 11.000000, eps 0.100000
+Step 2392 (688181) @ Episode 417/10000, loss: 108.98004913330078, reward 13.000000, eps 0.100000
+
+Copied model parameters to target network.
+Step 3248 (691430) @ Episode 418/10000, loss: 108.87721252441406, reward 10.000000, eps 0.100000
+Step 2166 (693597) @ Episode 419/10000, loss: 108.7424087524414, reward 16.000000, eps 0.100000
+Step 2195 (695793) @ Episode 420/10000, loss: 108.73226928710938, reward 15.000000, eps 0.100000
+Step 2619 (698413) @ Episode 421/10000, loss: 108.73214721679688, reward 9.000000, eps 0.100000
+
+Copied model parameters to target network.
+Step 2843 (701257) @ Episode 422/10000, loss: 108.6341552734375, reward 9.000000, eps 0.100000
+Step 2108 (703366) @ Episode 423/10000, loss: 108.4966049194336, reward 16.000000, eps 0.100000
+Step 2870 (706237) @ Episode 424/10000, loss: 108.49739837646484, reward 13.000000, eps 0.100000
+Step 2345 (708583) @ Episode 425/10000, loss: 108.49472045898438, reward 18.000000, eps 0.100000
+
+Copied model parameters to target network.
+Step 3814 (712398) @ Episode 426/10000, loss: 108.35914611816406, reward 6.000000, eps 0.100000
+Step 2883 (715282) @ Episode 427/10000, loss: 108.2698974609375, reward 14.000000, eps 0.100000
+Step 2299 (717582) @ Episode 428/10000, loss: 108.2643051147461, reward 14.000000, eps 0.100000
+
+Copied model parameters to target network.
+Step 2704 (720287) @ Episode 429/10000, loss: 108.23717498779297, reward 13.000000, eps 0.100000
+Step 1936 (722224) @ Episode 430/10000, loss: 108.00064849853516, reward 18.000000, eps 0.100000
+Step 2604 (724829) @ Episode 431/10000, loss: 107.99752807617188, reward 14.000000, eps 0.100000
+Step 2480 (727310) @ Episode 432/10000, loss: 107.99639892578125, reward 14.000000, eps 0.100000
+
+Copied model parameters to target network.
+Step 2726 (730037) @ Episode 433/10000, loss: 107.98897552490234, reward 18.000000, eps 0.100000
+Step 1978 (732016) @ Episode 434/10000, loss: 107.75103759765625, reward 19.000000, eps 0.100000
+Step 2604 (734621) @ Episode 435/10000, loss: 107.74829864501953, reward 13.000000, eps 0.100000
+Step 2518 (737140) @ Episode 436/10000, loss: 107.74435424804688, reward 14.000000, eps 0.100000
+Step 2294 (739435) @ Episode 437/10000, loss: 107.74298858642578, reward 16.000000, eps 0.100000
+
+Copied model parameters to target network.
+Step 2508 (741944) @ Episode 438/10000, loss: 107.56187438964844, reward 16.000000, eps 0.100000
+Step 1807 (743752) @ Episode 439/10000, loss: 107.5009536743164, reward 20.000000, eps 0.100000
+Step 2116 (745869) @ Episode 440/10000, loss: 107.49447631835938, reward 17.000000, eps 0.100000
+Step 1762 (747632) @ Episode 441/10000, loss: 107.49662017822266, reward 21.000000, eps 0.100000
+Step 2111 (749744) @ Episode 442/10000, loss: 107.49252319335938, reward 19.000000, eps 0.100000
+
+Copied model parameters to target network.
+Step 2534 (752279) @ Episode 443/10000, loss: 107.28074645996094, reward 14.000000, eps 0.100000
+Step 2365 (754645) @ Episode 444/10000, loss: 107.25161743164062, reward 15.000000, eps 0.100000
+Step 3010 (757656) @ Episode 445/10000, loss: 107.24971008300781, reward 10.000000, eps 0.100000
+
+Copied model parameters to target network.
+Step 2586 (760243) @ Episode 446/10000, loss: 107.22736358642578, reward 11.000000, eps 0.100000
+Step 2735 (762979) @ Episode 447/10000, loss: 107.00840759277344, reward 12.000000, eps 0.100000
+Step 2761 (765741) @ Episode 448/10000, loss: 107.00582885742188, reward 13.000000, eps 0.100000
+Step 1946 (767688) @ Episode 449/10000, loss: 107.00086975097656, reward 16.000000, eps 0.100000
+
+Copied model parameters to target network.
+Step 2471 (770160) @ Episode 450/10000, loss: 106.99456787109375, reward 11.000000, eps 0.100000
+Step 2447 (772608) @ Episode 451/10000, loss: 106.75724792480469, reward 11.000000, eps 0.100000
+Step 1692 (774301) @ Episode 452/10000, loss: 106.75845336914062, reward 20.000000, eps 0.100000
+Step 2685 (776987) @ Episode 453/10000, loss: 106.7579345703125, reward 15.000000, eps 0.100000
+Step 2798 (779786) @ Episode 454/10000, loss: 106.75077819824219, reward 13.000000, eps 0.100000
+
+Copied model parameters to target network.
+Step 2062 (781849) @ Episode 455/10000, loss: 106.52911376953125, reward 15.000000, eps 0.100000
+Step 2481 (784331) @ Episode 456/10000, loss: 106.49425506591797, reward 14.000000, eps 0.100000
+Step 2002 (786334) @ Episode 457/10000, loss: 106.48641204833984, reward 19.000000, eps 0.100000
+Step 1853 (788188) @ Episode 458/10000, loss: 106.48653411865234, reward 18.000000, eps 0.100000
+
+Copied model parameters to target network.
+Step 2237 (790426) @ Episode 459/10000, loss: 106.44444274902344, reward 13.000000, eps 0.100000
+Step 2115 (792542) @ Episode 460/10000, loss: 106.23504638671875, reward 17.000000, eps 0.100000
+Step 2178 (794721) @ Episode 461/10000, loss: 106.23055267333984, reward 16.000000, eps 0.100000
+Step 2371 (797093) @ Episode 462/10000, loss: 106.23284912109375, reward 13.000000, eps 0.100000
+Step 2293 (799387) @ Episode 463/10000, loss: 106.22372436523438, reward 13.000000, eps 0.100000
+
+Copied model parameters to target network.
+Step 1910 (801298) @ Episode 464/10000, loss: 106.05939483642578, reward 17.000000, eps 0.100000
+Step 1823 (803122) @ Episode 465/10000, loss: 105.96638488769531, reward 18.000000, eps 0.100000
+Step 2357 (805480) @ Episode 466/10000, loss: 105.96668243408203, reward 15.000000, eps 0.100000
+Step 1739 (807220) @ Episode 467/10000, loss: 105.96381378173828, reward 20.000000, eps 0.100000
+Step 2260 (809481) @ Episode 468/10000, loss: 105.95844268798828, reward 16.000000, eps 0.100000
+
+Copied model parameters to target network.
+Step 1991 (811473) @ Episode 469/10000, loss: 105.78382110595703, reward 17.000000, eps 0.100000
+Step 2283 (813757) @ Episode 470/10000, loss: 105.71058654785156, reward 16.000000, eps 0.100000
+Step 2307 (816065) @ Episode 471/10000, loss: 105.70411682128906, reward 12.000000, eps 0.100000
+Step 2358 (818424) @ Episode 472/10000, loss: 105.70365142822266, reward 17.000000, eps 0.100000
+
+Copied model parameters to target network.
+Step 1965 (820390) @ Episode 473/10000, loss: 105.66014099121094, reward 18.000000, eps 0.100000
+Step 1893 (822284) @ Episode 474/10000, loss: 105.4478759765625, reward 18.000000, eps 0.100000
+Step 2284 (824569) @ Episode 475/10000, loss: 105.44232940673828, reward 17.000000, eps 0.100000
+Step 2279 (826849) @ Episode 476/10000, loss: 105.43925476074219, reward 16.000000, eps 0.100000
+Step 1673 (828523) @ Episode 477/10000, loss: 105.43408203125, reward 20.000000, eps 0.100000
+
+Copied model parameters to target network.
+Step 2039 (830563) @ Episode 478/10000, loss: 105.3651351928711, reward 17.000000, eps 0.100000
+Step 1910 (832474) @ Episode 479/10000, loss: 105.1723403930664, reward 19.000000, eps 0.100000
+Step 2615 (835090) @ Episode 480/10000, loss: 105.17119598388672, reward 15.000000, eps 0.100000
+Step 2743 (837834) @ Episode 481/10000, loss: 105.16290283203125, reward 15.000000, eps 0.100000
+
+Copied model parameters to target network.
+Step 2785 (840620) @ Episode 482/10000, loss: 105.1056137084961, reward 14.000000, eps 0.100000
+Step 1708 (842329) @ Episode 483/10000, loss: 104.90458679199219, reward 20.000000, eps 0.100000
+Step 1724 (844054) @ Episode 484/10000, loss: 104.90206146240234, reward 20.000000, eps 0.100000
+Step 1991 (846046) @ Episode 485/10000, loss: 104.89258575439453, reward 17.000000, eps 0.100000
+Step 1910 (847957) @ Episode 486/10000, loss: 104.88892364501953, reward 17.000000, eps 0.100000
+Step 1864 (849822) @ Episode 487/10000, loss: 104.88785552978516, reward 18.000000, eps 0.100000
+
+Copied model parameters to target network.
+Step 2113 (851936) @ Episode 488/10000, loss: 104.67294311523438, reward 17.000000, eps 0.100000
+Step 1749 (853686) @ Episode 489/10000, loss: 104.6430892944336, reward 20.000000, eps 0.100000
+Step 2603 (856290) @ Episode 490/10000, loss: 104.63838958740234, reward 14.000000, eps 0.100000
+Step 2010 (858301) @ Episode 491/10000, loss: 104.63811492919922, reward 17.000000, eps 0.100000
+
+Copied model parameters to target network.
+Step 2150 (860452) @ Episode 492/10000, loss: 104.59165954589844, reward 15.000000, eps 0.100000
+Step 2123 (862576) @ Episode 493/10000, loss: 104.37322235107422, reward 15.000000, eps 0.100000
+Step 2165 (864742) @ Episode 494/10000, loss: 104.36837768554688, reward 18.000000, eps 0.100000
+Step 2118 (866861) @ Episode 495/10000, loss: 104.37228393554688, reward 13.000000, eps 0.100000
+Step 2331 (869193) @ Episode 496/10000, loss: 104.36174774169922, reward 12.000000, eps 0.100000
+
+Copied model parameters to target network.
+Step 2748 (871942) @ Episode 497/10000, loss: 104.19188690185547, reward 10.000000, eps 0.100000
+Step 2142 (874085) @ Episode 498/10000, loss: 104.11456298828125, reward 13.000000, eps 0.100000
+Step 2258 (876344) @ Episode 499/10000, loss: 104.1094741821289, reward 15.000000, eps 0.100000
+Step 1841 (878186) @ Episode 500/10000, loss: 104.11035919189453, reward 19.000000, eps 0.100000
+
+Copied model parameters to target network.
+Step 2247 (880434) @ Episode 501/10000, loss: 104.05774688720703, reward 16.000000, eps 0.100000
+Step 2325 (882760) @ Episode 502/10000, loss: 103.85005950927734, reward 13.000000, eps 0.100000
+Step 2129 (884890) @ Episode 503/10000, loss: 103.85063934326172, reward 15.000000, eps 0.100000
+Step 2334 (887225) @ Episode 504/10000, loss: 103.84453582763672, reward 14.000000, eps 0.100000
+
+Copied model parameters to target network.
+Step 2855 (890081) @ Episode 505/10000, loss: 103.84110260009766, reward 15.000000, eps 0.100000
+Step 3090 (893172) @ Episode 506/10000, loss: 103.58785247802734, reward 11.000000, eps 0.100000
+Step 2227 (895400) @ Episode 507/10000, loss: 103.58245849609375, reward 13.000000, eps 0.100000
+Step 2245 (897646) @ Episode 508/10000, loss: 103.57678985595703, reward 13.000000, eps 0.100000
+Step 2120 (899767) @ Episode 509/10000, loss: 103.57588958740234, reward 16.000000, eps 0.100000
+
+Copied model parameters to target network.
+Step 2124 (901892) @ Episode 510/10000, loss: 103.36859893798828, reward 17.000000, eps 0.100000
+Step 2211 (904104) @ Episode 511/10000, loss: 103.3320083618164, reward 18.000000, eps 0.100000
+Step 2318 (906423) @ Episode 512/10000, loss: 103.3330078125, reward 12.000000, eps 0.100000
+Step 2252 (908676) @ Episode 513/10000, loss: 103.32955932617188, reward 17.000000, eps 0.100000
+
+Copied model parameters to target network.
+Step 2103 (910780) @ Episode 514/10000, loss: 103.23707580566406, reward 16.000000, eps 0.100000
+Step 2020 (912801) @ Episode 515/10000, loss: 103.0691146850586, reward 18.000000, eps 0.100000
+Step 2217 (915019) @ Episode 516/10000, loss: 103.06396484375, reward 16.000000, eps 0.100000
+Step 2170 (917190) @ Episode 517/10000, loss: 103.06587982177734, reward 18.000000, eps 0.100000
+Step 2325 (919516) @ Episode 518/10000, loss: 103.05724334716797, reward 14.000000, eps 0.100000
+
+Copied model parameters to target network.
+Step 2275 (921792) @ Episode 519/10000, loss: 102.8703384399414, reward 18.000000, eps 0.100000
+Step 2127 (923920) @ Episode 520/10000, loss: 102.80341339111328, reward 17.000000, eps 0.100000
+Step 2173 (926094) @ Episode 521/10000, loss: 102.7952651977539, reward 16.000000, eps 0.100000
+Step 1860 (927955) @ Episode 522/10000, loss: 102.79774475097656, reward 17.000000, eps 0.100000
+
+Copied model parameters to target network.
+Step 2495 (930451) @ Episode 523/10000, loss: 102.7501220703125, reward 14.000000, eps 0.100000
+Step 2128 (932580) @ Episode 524/10000, loss: 102.52093505859375, reward 17.000000, eps 0.100000
+Step 2262 (934843) @ Episode 525/10000, loss: 102.52753448486328, reward 14.000000, eps 0.100000
+Step 1925 (936769) @ Episode 526/10000, loss: 102.51905059814453, reward 17.000000, eps 0.100000
+Step 2145 (938915) @ Episode 527/10000, loss: 102.5145492553711, reward 18.000000, eps 0.100000
+
+Copied model parameters to target network.
+Step 1979 (940895) @ Episode 528/10000, loss: 102.42414093017578, reward 17.000000, eps 0.100000
+Step 2199 (943095) @ Episode 529/10000, loss: 102.29906463623047, reward 15.000000, eps 0.100000
+Step 2558 (945654) @ Episode 530/10000, loss: 102.29293060302734, reward 15.000000, eps 0.100000
+Step 2714 (948369) @ Episode 531/10000, loss: 102.28910064697266, reward 14.000000, eps 0.100000
+
+Copied model parameters to target network.
+Step 2368 (950738) @ Episode 532/10000, loss: 102.22128295898438, reward 12.000000, eps 0.100000
+Step 2143 (952882) @ Episode 533/10000, loss: 102.05931091308594, reward 18.000000, eps 0.100000
+Step 2073 (954956) @ Episode 534/10000, loss: 102.04339599609375, reward 15.000000, eps 0.100000
+Step 2444 (957401) @ Episode 535/10000, loss: 102.03791809082031, reward 17.000000, eps 0.100000
+Step 2188 (959590) @ Episode 536/10000, loss: 102.04083251953125, reward 15.000000, eps 0.100000
+
+Copied model parameters to target network.
+Step 2361 (961952) @ Episode 537/10000, loss: 101.8373794555664, reward 13.000000, eps 0.100000
+Step 2163 (964116) @ Episode 538/10000, loss: 101.7881851196289, reward 15.000000, eps 0.100000
+Step 1740 (965857) @ Episode 539/10000, loss: 101.77815246582031, reward 20.000000, eps 0.100000
+Step 2639 (968497) @ Episode 540/10000, loss: 101.78434753417969, reward 12.000000, eps 0.100000
+
+Copied model parameters to target network.
+Step 1989 (970487) @ Episode 541/10000, loss: 101.71842193603516, reward 17.000000, eps 0.100000
+Step 2414 (972902) @ Episode 542/10000, loss: 101.53180694580078, reward 14.000000, eps 0.100000
+Step 2430 (975333) @ Episode 543/10000, loss: 101.53131103515625, reward 13.000000, eps 0.100000
+Step 2084 (977418) @ Episode 544/10000, loss: 101.53176879882812, reward 16.000000, eps 0.100000
+Step 2025 (979444) @ Episode 545/10000, loss: 101.53172302246094, reward 16.000000, eps 0.100000
+
+Copied model parameters to target network.
+Step 2150 (981595) @ Episode 546/10000, loss: 101.33879852294922, reward 17.000000, eps 0.100000
+Step 1691 (983287) @ Episode 547/10000, loss: 101.25415802001953, reward 20.000000, eps 0.100000
+Step 1883 (985171) @ Episode 548/10000, loss: 101.25543212890625, reward 18.000000, eps 0.100000
+Step 2649 (987821) @ Episode 549/10000, loss: 101.25505065917969, reward 8.000000, eps 0.100000
+
+Copied model parameters to target network.
+Step 2376 (990198) @ Episode 550/10000, loss: 101.23026275634766, reward 13.000000, eps 0.100000
+Step 1998 (992197) @ Episode 551/10000, loss: 100.96471405029297, reward 18.000000, eps 0.100000
+Step 2212 (994410) @ Episode 552/10000, loss: 100.96390533447266, reward 18.000000, eps 0.100000
+Step 2099 (996510) @ Episode 553/10000, loss: 100.95282745361328, reward 18.000000, eps 0.100000
+Step 2376 (998887) @ Episode 554/10000, loss: 100.96826934814453, reward 13.000000, eps 0.100000
+
+Copied model parameters to target network.
+Step 1724 (1000612) @ Episode 555/10000, loss: 100.86930847167969, reward 20.000000, eps 0.100000
+Step 2300 (1002913) @ Episode 556/10000, loss: 100.70075988769531, reward 15.000000, eps 0.100000
+Step 1993 (1004907) @ Episode 557/10000, loss: 100.6880874633789, reward 18.000000, eps 0.100000
+Step 2577 (1007485) @ Episode 558/10000, loss: 100.6907958984375, reward 15.000000, eps 0.100000
+Step 2129 (1009615) @ Episode 559/10000, loss: 100.68846893310547, reward 16.000000, eps 0.100000
+
+Copied model parameters to target network.
+Step 2102 (1011718) @ Episode 560/10000, loss: 100.47389221191406, reward 17.000000, eps 0.100000
+Step 2027 (1013746) @ Episode 561/10000, loss: 100.43384552001953, reward 16.000000, eps 0.100000
+Step 1788 (1015535) @ Episode 562/10000, loss: 100.42805480957031, reward 19.000000, eps 0.100000
+Step 1842 (1017378) @ Episode 563/10000, loss: 100.42188262939453, reward 18.000000, eps 0.100000
+Step 1840 (1019219) @ Episode 564/10000, loss: 100.41968536376953, reward 17.000000, eps 0.100000
+
+Copied model parameters to target network.
+Step 2226 (1021446) @ Episode 565/10000, loss: 100.23656463623047, reward 13.000000, eps 0.100000
+Step 1787 (1023234) @ Episode 566/10000, loss: 100.13179779052734, reward 19.000000, eps 0.100000
+Step 2528 (1025763) @ Episode 567/10000, loss: 100.14256286621094, reward 12.000000, eps 0.100000
+Step 2346 (1028110) @ Episode 568/10000, loss: 100.13941955566406, reward 16.000000, eps 0.100000
+
+Copied model parameters to target network.
+Step 1983 (1030094) @ Episode 569/10000, loss: 100.12226104736328, reward 18.000000, eps 0.100000
+Step 2331 (1032426) @ Episode 570/10000, loss: 99.90118408203125, reward 13.000000, eps 0.100000
+Step 2080 (1034507) @ Episode 571/10000, loss: 99.89995574951172, reward 14.000000, eps 0.100000
+Step 2562 (1037070) @ Episode 572/10000, loss: 99.89364624023438, reward 13.000000, eps 0.100000
+Step 1969 (1039040) @ Episode 573/10000, loss: 99.89598083496094, reward 18.000000, eps 0.100000
+
+Copied model parameters to target network.
+Step 2177 (1041218) @ Episode 574/10000, loss: 99.73600769042969, reward 14.000000, eps 0.100000
+Step 2186 (1043405) @ Episode 575/10000, loss: 99.60246276855469, reward 15.000000, eps 0.100000
+Step 2207 (1045613) @ Episode 576/10000, loss: 99.6114730834961, reward 17.000000, eps 0.100000
+Step 1999 (1047613) @ Episode 577/10000, loss: 99.60348510742188, reward 17.000000, eps 0.100000
+Step 1895 (1049509) @ Episode 578/10000, loss: 99.60340881347656, reward 19.000000, eps 0.100000
+
+Copied model parameters to target network.
+Step 2376 (1051886) @ Episode 579/10000, loss: 99.39521026611328, reward 17.000000, eps 0.100000
+Step 2196 (1054083) @ Episode 580/10000, loss: 99.33887481689453, reward 14.000000, eps 0.100000
+Step 1872 (1055956) @ Episode 581/10000, loss: 99.33674621582031, reward 18.000000, eps 0.100000
+Step 2443 (1058400) @ Episode 582/10000, loss: 99.33635711669922, reward 15.000000, eps 0.100000
+
+Copied model parameters to target network.
+Step 1883 (1060284) @ Episode 583/10000, loss: 99.29234313964844, reward 18.000000, eps 0.100000
+Step 2298 (1062583) @ Episode 584/10000, loss: 99.05297088623047, reward 11.000000, eps 0.100000
+Step 1857 (1064441) @ Episode 585/10000, loss: 99.05473327636719, reward 20.000000, eps 0.100000
+Step 1952 (1066394) @ Episode 586/10000, loss: 99.05880737304688, reward 16.000000, eps 0.100000
+Step 2082 (1068477) @ Episode 587/10000, loss: 99.04788208007812, reward 16.000000, eps 0.100000
+
+Copied model parameters to target network.
+Step 2156 (1070634) @ Episode 588/10000, loss: 98.98297882080078, reward 14.000000, eps 0.100000
+Step 2437 (1073072) @ Episode 589/10000, loss: 98.7885971069336, reward 12.000000, eps 0.100000
+Step 2073 (1075146) @ Episode 590/10000, loss: 98.78012084960938, reward 15.000000, eps 0.100000
+Step 1880 (1077027) @ Episode 591/10000, loss: 98.7873306274414, reward 17.000000, eps 0.100000
+Step 2488 (1079516) @ Episode 592/10000, loss: 98.78910064697266, reward 13.000000, eps 0.100000
+
+Copied model parameters to target network.
+Step 1783 (1081300) @ Episode 593/10000, loss: 98.60617065429688, reward 18.000000, eps 0.100000
+Step 2522 (1083823) @ Episode 594/10000, loss: 98.53335571289062, reward 13.000000, eps 0.100000
+Step 1921 (1085745) @ Episode 595/10000, loss: 98.53142547607422, reward 17.000000, eps 0.100000
+Step 2208 (1087954) @ Episode 596/10000, loss: 98.52116394042969, reward 16.000000, eps 0.100000
+
+Copied model parameters to target network.
+Step 2394 (1090349) @ Episode 597/10000, loss: 98.4909439086914, reward 14.000000, eps 0.100000
+Step 1857 (1092207) @ Episode 598/10000, loss: 98.25548553466797, reward 18.000000, eps 0.100000
+Step 1942 (1094150) @ Episode 599/10000, loss: 98.25828552246094, reward 17.000000, eps 0.100000
+Step 2520 (1096671) @ Episode 600/10000, loss: 98.24304962158203, reward 11.000000, eps 0.100000
+Step 1953 (1098625) @ Episode 601/10000, loss: 98.25239562988281, reward 18.000000, eps 0.100000
+
+Copied model parameters to target network.
+Step 1799 (1100425) @ Episode 602/10000, loss: 98.19232940673828, reward 18.000000, eps 0.100000
+Step 2260 (1102686) @ Episode 603/10000, loss: 97.97283935546875, reward 11.000000, eps 0.100000
+Step 2024 (1104711) @ Episode 604/10000, loss: 97.96985626220703, reward 18.000000, eps 0.100000
+Step 1973 (1106685) @ Episode 605/10000, loss: 97.96525573730469, reward 19.000000, eps 0.100000
+Step 2376 (1109062) @ Episode 606/10000, loss: 97.96835327148438, reward 12.000000, eps 0.100000
+
+Copied model parameters to target network.
+Step 2237 (1111300) @ Episode 607/10000, loss: 97.8258056640625, reward 13.000000, eps 0.100000
+Step 1855 (1113156) @ Episode 608/10000, loss: 97.71371459960938, reward 19.000000, eps 0.100000
+Step 2234 (1115391) @ Episode 609/10000, loss: 97.71215057373047, reward 13.000000, eps 0.100000
+Step 2880 (1118272) @ Episode 610/10000, loss: 97.71733856201172, reward 11.000000, eps 0.100000
+
+Copied model parameters to target network.
+Step 2067 (1120340) @ Episode 611/10000, loss: 97.6785888671875, reward 17.000000, eps 0.100000
+Step 2139 (1122480) @ Episode 612/10000, loss: 97.4627914428711, reward 16.000000, eps 0.100000
+Step 2079 (1124560) @ Episode 613/10000, loss: 97.45973205566406, reward 17.000000, eps 0.100000
+Step 2095 (1126656) @ Episode 614/10000, loss: 97.4587173461914, reward 17.000000, eps 0.100000
+Step 2518 (1129175) @ Episode 615/10000, loss: 97.45561218261719, reward 14.000000, eps 0.100000
+
+Copied model parameters to target network.
+Step 2098 (1131274) @ Episode 616/10000, loss: 97.29243469238281, reward 16.000000, eps 0.100000
+Step 1925 (1133200) @ Episode 617/10000, loss: 97.17878723144531, reward 18.000000, eps 0.100000
+Step 1764 (1134965) @ Episode 618/10000, loss: 97.18309020996094, reward 19.000000, eps 0.100000
+Step 2136 (1137102) @ Episode 619/10000, loss: 97.17501068115234, reward 16.000000, eps 0.100000
+Step 2074 (1139177) @ Episode 620/10000, loss: 97.16931915283203, reward 17.000000, eps 0.100000
+
+Copied model parameters to target network.
+Step 2082 (1141260) @ Episode 621/10000, loss: 97.02621459960938, reward 16.000000, eps 0.100000
+Step 1807 (1143068) @ Episode 622/10000, loss: 96.91790008544922, reward 19.000000, eps 0.100000
+Step 2208 (1145277) @ Episode 623/10000, loss: 96.92388153076172, reward 15.000000, eps 0.100000
+Step 2003 (1147281) @ Episode 624/10000, loss: 96.91429901123047, reward 17.000000, eps 0.100000
+Step 2277 (1149559) @ Episode 625/10000, loss: 96.91756439208984, reward 17.000000, eps 0.100000
+
+Copied model parameters to target network.
+Step 2300 (1151860) @ Episode 626/10000, loss: 96.7013168334961, reward 14.000000, eps 0.100000
+Step 1940 (1153801) @ Episode 627/10000, loss: 96.6362075805664, reward 17.000000, eps 0.100000
+Step 1637 (1155439) @ Episode 628/10000, loss: 96.63837432861328, reward 21.000000, eps 0.100000
+Step 2582 (1158022) @ Episode 629/10000, loss: 96.64012145996094, reward 14.000000, eps 0.100000
+
+Copied model parameters to target network.
+Step 2028 (1160051) @ Episode 630/10000, loss: 96.63248443603516, reward 18.000000, eps 0.100000
+Step 2399 (1162451) @ Episode 631/10000, loss: 96.3794174194336, reward 16.000000, eps 0.100000
+Step 2058 (1164510) @ Episode 632/10000, loss: 96.36814880371094, reward 18.000000, eps 0.100000
+Step 1885 (1166396) @ Episode 633/10000, loss: 96.3768539428711, reward 17.000000, eps 0.100000
+Step 2339 (1168736) @ Episode 634/10000, loss: 96.37041473388672, reward 14.000000, eps 0.100000
+
+Copied model parameters to target network.
+Step 2517 (1171254) @ Episode 635/10000, loss: 96.21319580078125, reward 14.000000, eps 0.100000
+Step 2089 (1173344) @ Episode 636/10000, loss: 96.04995727539062, reward 17.000000, eps 0.100000
+Step 2389 (1175734) @ Episode 637/10000, loss: 96.04611206054688, reward 11.000000, eps 0.100000
+Step 2047 (1177782) @ Episode 638/10000, loss: 96.04273986816406, reward 18.000000, eps 0.100000
+
+Copied model parameters to target network.
+Step 2222 (1180005) @ Episode 639/10000, loss: 96.04200744628906, reward 10.000000, eps 0.100000
+Step 2091 (1182097) @ Episode 640/10000, loss: 95.76577758789062, reward 15.000000, eps 0.100000
+Step 1868 (1183966) @ Episode 641/10000, loss: 95.75859069824219, reward 20.000000, eps 0.100000
+Step 1785 (1185752) @ Episode 642/10000, loss: 95.75448608398438, reward 20.000000, eps 0.100000
